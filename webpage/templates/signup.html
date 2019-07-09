@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>generic form builder</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='b.css')}}">
+</head>
+<body>
+	<div>
+		<br><br>
+		<p><b><font size="5" color="red">Welcome to CodingThunder!!!!</font></b></p>
+		<p><b><font size="4" >Create Your Account Here</font></b></p>
+		<form action="/signup" method="POST">
+		<p><input type="email" placeholder="    Email" name="email" class="form-control" required></p>
+		<p><input type="password" placeholder="  Enter your password" name="password" class="form-control" required></p>
+		<p><input type="password" placeholder="  confirm password" name="confirm" class="form-control" required></p>
+		<p><button type="submit" value="submit">signup</button></p>
+		</form>
+	</div>
+</body>
+</html>

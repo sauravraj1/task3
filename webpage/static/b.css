@@ -1,0 +1,36 @@
+div
+{
+	width:450px;
+	height:450px;
+	border-color: black;
+	border-style: solid;
+	background-color:;
+	border-radius: 20px;
+	border-width: 5;
+	box-shadow: 4px 4px 20px red;
+	transform: translate(450px,0px)
+}
+body
+{
+	text-align:center;
+	background-image: url('back1.jpg');
+}
+input
+{
+	width:380px;
+	height:30px;
+	font-size: 14px;
+	border-width: 3px;
+}
+a:hover
+{
+	cursor: pointer;
+	color:black;
+}
+button.raj
+{
+	cursor: pointer;
+	border-width:0px;
+	background-color: white;
+	color:blue;
+}

@@ -1,0 +1,104 @@
+.first
+{
+	width:102%;
+	height:200px;
+	background-color:purple;
+	transform:translate(-10px,-8px);
+}
+body
+{
+	background-color:lightblue;
+}
+.s
+{
+	transform:translate(1270%,0px);
+	height:40px;
+	width:80px;
+	border-radius:6px;
+	border-color:purple;
+
+}
+button:hover
+{
+	cursor: pointer;
+	color:black;
+}
+.second
+{
+	width:700px;
+	height:400px;
+	background-color:white;
+	transform: translate(280px,-60px)
+}
+.third
+{
+	width:100%;
+	height:38px;
+	text-align:center;
+	border: 0;
+    	outline: 0;
+    	border-bottom: 1px solid blue;
+}
+
+.fourth
+{
+	width:100%;
+	height:180px;
+	border-width:1;
+	text-align:left;
+}
+.fifth
+{
+	width:97%;
+	height:50%;
+	border: 0;
+    	outline: 0;
+    	border-bottom: 1px solid blue;
+	font-size:30px;
+	font-color:black;
+	padding-left:20px;
+}
+.sixth
+{
+	width:97%;
+	height:30%;
+	border: 0;
+    	outline: 0;
+    	border-bottom: 1px solid blue;
+    	font-size:16px;
+	font-color:black;
+	padding-left:20px;
+	
+}
+.seventh
+{
+	width:100%;
+	height:30%;
+	text-align:left;
+	border: 0;
+    	outline: 0;
+    	border-bottom: 1px solid white;
+    	background-color:white;
+}
+.eight
+{
+	width:97%;
+	height:80px;
+	border: 0;
+    	outline: 0;
+    	border-bottom: 1px solid blue;
+    	font-size:30px;
+	font-color:black;
+	padding-left:20px;
+}
+.nine
+{
+	width:50%;
+	height:30px;
+	border: 0;
+    	outline: 0;
+    	border-bottom: 1px solid blue;
+    	font-size:16px;
+	font-color:black;
+	padding-left:20px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.first
+		{
+			width:102%;
+			height:200px;
+			background-color:purple;
+			transform:translate(-10px,-8px);
+		}
+		.s
+		{
+			transform:translate(1270%,0px);
+			height:40px;
+			width:80px;
+			border-radius:6px;
+			border-color:purple;
+
+		}
+		body
+		{
+			background-color:lightblue;
+		}
+		button:hover
+		{
+			cursor: pointer;
+			color:black;
+		}
+		.second
+		{
+			width:700px;
+			background-color:white;
+			transform: translate(280px,-60px)
+		}
+		.third
+		{
+			width:100%;
+			height:38px;
+			text-align:center;
+			border: 0;
+		    outline: 0;
+		    border-bottom: 1px solid blue;
+		}
+		.fourth
+		{
+			padding:20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="first">
+		<br><br><h><b><font size="4" color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Untitled Form</font></b></h>
+		<button class="s" onclick=""><b>SEND</b></button>
+	</div>
+	<div class="second">
+			<div class="third">
+				<pre><a class="raj" href="/form"><font size="5"><b>Questions</b></font></a>                        <a class="raj" href="/response"><font size="5"><b>Responses</b></font></a></pre>
+			</div>
+			<div class="fourth">
+				<h><font size="8"><b>{{page.title}}</b></font></h>
+				<p><font size="4"><b>{{page.description}}</b></font></p>
+				{% for quest in quests %}
+  					<p><font size="6"><b>{{quest.question}}</b><br></font></p>
+  					{% for rightoption in rightoptions %}
+  						{% if quest.id==rightoption.question_id %}
+  							<p><font size="3"><b>{{rightoption.option}}</b><br></font></p>
+  						{% endif %}
+  					{% endfor %}
+				{% endfor %}
+				<h><font size="2"><b>nothing can be edited here</b></font></h>
+			</div>
+	</div>
+
+</body>
+</html>
