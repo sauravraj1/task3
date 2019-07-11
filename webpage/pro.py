@@ -2,6 +2,7 @@ from flask import Flask,render_template,request,session,logging,url_for,redirect
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session,sessionmaker
+import uuid
 
 
 
@@ -80,6 +81,21 @@ def login():
             if missing.password==password:
                 return render_template("length.html")
         return render_template("login.html")
+
+
+
+
+
+@app.route('/form/<user>')
+def user_form(user):
+    data=Length.query.all()
+    length=Length.query.filter_by(id=data[-1].id).first()
+    q=length.optionlength
+    obj=Form.query.all()
+    page=Form.query.filter_by(id=obj[-1].id).first()
+    quests=Question.query.filter_by(form_id=obj[-1].id).all()
+    quest=Question.query.filter_by(form_id=obj[-1].id).first()
+    return render_template("page.html",page=page,quest=quest,quests=quests,value=q)
     
 @app.route("/form",methods=["GET","POST"])
 def form():
@@ -96,6 +112,7 @@ def form():
         p=length.questionlength
         q=length.optionlength
         k=0
+        name=uuid.uuid4()
         for i in range(0,p):
             ent=Question(question=questionarray[i],form=form1)
             db.session.add(ent)
@@ -104,11 +121,7 @@ def form():
                 db.session.add(entr)
                 k+=1
         db.session.commit()
-        obj=Form.query.all()
-        page=Form.query.filter_by(id=obj[-1].id).first()
-        quests=Question.query.filter_by(form_id=obj[-1].id).all()
-        quest=Question.query.filter_by(form_id=obj[-1].id).first()
-        return render_template("page.html",page=page,quest=quest,quests=quests,value=q)
+        return redirect(url_for('user_form',user=name)) 
     return render_template("form.html")
 
                              
@@ -149,6 +162,10 @@ def length():
         db.session.commit()
         return render_template("form.html")
     return render_template("length.html")
+
+@app.route("/logout")
+def logout():
+    return render_template("logout.html")
 
 if __name__ == '__main__':
    app.run(debug=True)

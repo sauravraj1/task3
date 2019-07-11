@@ -17,7 +17,7 @@
 		}
 		.s
 		{
-			transform:translate();
+			transform:translate(1180px,-45px);
 			height:40px;
 			width:80px;
 			border-radius:6px;
@@ -129,8 +129,10 @@
 <body>
 
 	<div class="first">
-		<br><br><h><b><font size="4" color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Untitled Form</font></b></h><br><br>
-		<h><font size="4" color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;please enter valid length of question and option</font></h>
+		<br><br><b><font size="5" color="white">&nbsp;&nbsp;&nbsp;&nbsp;Untitled Form</font></b>					
+		<br><br>
+		<button class="s" onclick="window.location.href ='/logout';"><b>Logout</b></button>
+		<pre><font size="4" color="white">                      	      please enter valid length of question and option</font></pre>
 		
 	</div>
 	<div class="second">
@@ -147,7 +149,7 @@
 			<input class="nine" type="text" placeholder="Option" name="option">
 		</div>
 		<div id="question"></div>
-		<button class="s" onclick=""><b>SEND</b></button>
+		<button  onclick=""><b>SEND</b></button>
 		</form>
 		
 		<p id="addnew"><a href="javascript:add_option()">Add option </a></p>
